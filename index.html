@@ -9,6 +9,7 @@
     <style>
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
         .video-container iframe, .video-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px; }
+        .feature-img { object-fit: cover; height: 160px; width: 100%; border-radius: 8px; margin-bottom: 1rem; }
     </style>
 </head>
 <body class="bg-gray-50 font-sans text-gray-900">
@@ -25,29 +26,45 @@
     <header class="bg-blue-700 text-white py-20 px-10">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
             <div class="md:w-1/2 text-center md:text-left">
-                <h1 class="text-4xl md:text-6xl font-extrabold mb-6">Stay Connected to Your Car</h1>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">Stay Connected to Your Car</h1>
                 <p class="text-xl mb-10 opacity-90">SafeFleet provides peace of mind and enhanced safety with real-time tracking and daily reports.</p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="#demo" class="bg-white text-blue-700 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition">Watch Demo</a>
+                    <a href="#demo" class="bg-white text-blue-700 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition shadow-lg text-center">Watch Demo</a>
                 </div>
             </div>
             
             <div class="md:w-1/2">
-                <img src="Server_Logo_frint.png" alt="SafeFleet App Preview" class="rounded-2xl shadow-2xl border-4 border-blue-500/30">
+                <img src="Server_Logo_frint.png" alt="SafeFleet App Preview" class="rounded-2xl shadow-2xl border-4 border-blue-500/30 w-full">
             </div>
         </div>
     </header>
 
-    <section id="features" class="py-20 px-10 max-w-6xl mx-auto text-center">
+    <section id="features" class="py-20 px-10 max-w-7xl mx-auto text-center">
         <h2 class="text-3xl font-bold mb-12">Total Visibility</h2>
         <div class="grid md:grid-cols-3 gap-10">
-            <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+            
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition">
                 <i class="fa-solid fa-location-dot text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-xl font-bold mb-3">Real-Time Tracking</h3>
-                <img src="tracking-feature.jpg" alt="Tracking" class="w-full h-40 object-cover rounded-lg mb-4">
-                <p class="text-gray-600">Monitor your car's location anytime, all the time.</p>
+                <img src="tracking-feature.jpg" alt="Tracking" class="feature-img">
+                <p class="text-gray-600">Monitor your car's location anytime, all the time with precision.</p>
             </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition">
+                <i class="fa-solid fa-file-lines text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-bold mb-3">Daily Reports</h3>
+                <div class="bg-gray-200 feature-img flex items-center justify-center text-gray-400">Add Report Image</div>
+                <p class="text-gray-600">Receive comprehensive summaries of your vehicle’s daily activity.</p>
             </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition">
+                <i class="fa-solid fa-bell text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-bold mb-3">Instant Alerts</h3>
+                <div class="bg-gray-200 feature-img flex items-center justify-center text-gray-400">Add Alerts Image</div>
+                <p class="text-gray-600">Get notified immediately for over-speeding or entering unknown locations.</p>
+            </div>
+
+        </div>
     </section>
 
     <section id="demo" class="bg-gray-900 py-20 px-10 text-white">
@@ -57,8 +74,7 @@
             
             <div class="video-container shadow-2xl">
                 <iframe src="https://www.youtube.com/embed/2N5Kl1x_Ie4" frameborder="0" allowfullscreen></iframe>
-                
-                </div>
+            </div>
         </div>
     </section>
 
