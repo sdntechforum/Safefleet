@@ -4,23 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SafeFleet | Real-Time Vehicle Tracking</title>
-    <meta name="description" content="Stay connected to your vehicle 24/7. SafeFleet provides high-precision real-time location tracking, detailed daily activity reports, and instant over-speed alerts.">
+    <meta name="description" content="Stay connected to your vehicle 24/7 with SafeFleet's hardware-software solution.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
         .video-container iframe, .video-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px; }
         .feature-img { object-fit: cover; height: 160px; width: 100%; border-radius: 8px; margin-bottom: 1rem; }
+        /* Animation to make the device "float" slightly */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-animation { animation: float 3s ease-in-out infinite; }
     </style>
 </head>
 <body class="bg-gray-50 font-sans text-gray-900">
 
     <nav class="flex justify-between items-center py-4 px-10 bg-white shadow-sm sticky top-0 z-50">
         <div class="flex items-center gap-3">
-            <img src="safefleet-device.png" alt="SafeFleet Device" class="h-10 w-auto rounded-md shadow-sm">
+            <img src="safefleet-device.jpg" alt="SafeFleet Device" class="h-10 w-auto rounded-md">
             <div class="text-2xl font-bold text-blue-700">SafeFleet</div>
         </div>
-
         <div class="space-x-8 hidden md:flex font-medium">
             <a href="#features" class="hover:text-blue-600 transition">Features</a>
             <a href="#demo" class="hover:text-blue-600 transition">Product Demo</a>
@@ -28,18 +34,28 @@
         </div>
     </nav>
 
-    <header class="bg-blue-700 text-white py-20 px-10">
+    <header class="bg-blue-700 text-white py-20 px-10 overflow-hidden">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
             <div class="md:w-1/2 text-center md:text-left">
-                <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">Stay Connected to Your Car</h1>
-                <p class="text-xl mb-10 opacity-90">SafeFleet provides peace of mind and enhanced safety with real-time tracking and daily reports.</p>
+                <span class="bg-blue-500/30 text-blue-100 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-blue-400/30 mb-4 inline-block">
+                    Hardware + Software Solution
+                </span>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">Stay Connected <br>to Your Car</h1>
+                <p class="text-xl mb-10 opacity-90">SafeFleet combines professional-grade OBD hardware with real-time tracking for ultimate peace of mind.</p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                     <a href="#demo" class="bg-white text-blue-700 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition shadow-lg text-center">Watch Demo</a>
                 </div>
             </div>
             
-            <div class="md:w-1/2">
-                <img src="Server_Logo_frint.png" alt="SafeFleet App Preview" class="rounded-2xl shadow-2xl border-4 border-blue-500/30 w-full">
+            <div class="md:w-1/2 relative flex items-center justify-center">
+                <img src="Server_Logo_frint.png" alt="SafeFleet App" class="rounded-2xl shadow-2xl border-4 border-blue-500/30 w-4/5 ml-auto">
+                
+                <div class="absolute -bottom-6 -left-4 md:-left-10 w-1/3 float-animation">
+                    <img src="safefleet-device.jpg" alt="SafeFleet Device" class="rounded-xl shadow-2xl border-4 border-white">
+                    <div class="bg-white text-blue-700 text-[10px] font-bold py-1 px-2 rounded-md shadow-md mt-2 text-center uppercase">
+                        Plug & Play Device
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -47,36 +63,30 @@
     <section id="features" class="py-20 px-10 max-w-7xl mx-auto text-center">
         <h2 class="text-3xl font-bold mb-12">Total Visibility</h2>
         <div class="grid md:grid-cols-3 gap-10">
-            
             <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition">
                 <i class="fa-solid fa-location-dot text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-xl font-bold mb-3">Real-Time Tracking</h3>
                 <img src="tracking-feature.png" alt="Tracking" class="feature-img">
                 <p class="text-gray-600">Monitor your car's location anytime, all the time with precision.</p>
             </div>
-
             <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition">
                 <i class="fa-solid fa-file-lines text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-xl font-bold mb-3">Daily Reports</h3>
                 <img src="daily-report.png" alt="Daily Reports" class="feature-img">
                 <p class="text-gray-600">Receive comprehensive summaries of your vehicle’s daily activity.</p>
             </div>
-
             <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition">
                 <i class="fa-solid fa-bell text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-xl font-bold mb-3">Instant Alerts</h3>
                 <img src="instant-alerts.png" alt="Instant Alerts" class="feature-img">
                 <p class="text-gray-600">Get notified immediately for over-speeding or entering unknown locations.</p>
             </div>
-
         </div>
     </section>
 
     <section id="demo" class="bg-gray-900 py-20 px-10 text-white">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl font-bold mb-6">See SafeFleet in Action</h2>
-            <p class="text-gray-400 mb-12">Take a quick tour of how our dashboard handles real-time data.</p>
-            
             <div class="video-container shadow-2xl">
                 <iframe src="https://www.youtube.com/embed/2N5Kl1x_Ie4" frameborder="0" allowfullscreen></iframe>
             </div>
